@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Sean & Sons</title>
+    </head>
+    <body>
+        <h1>Order List</h1>
+        <hr>
+        {% for order in order_list %}
+        <p>Name: {{order.name}}</p>
+        <p>Date: {{order.date}}</p>
+        <p>Product {{order.product_name}}</p>
+        <p>Quantity {{order.quantity}}</p>
+        <p>Address {{order.address}}</p>
+        <h2><a href="/orders/{{loop.index -1}}">View more</a></h2>
+        <hr>
+        {% endfor %}
+    </body>
+</html>
